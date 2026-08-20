@@ -4,13 +4,12 @@ from frappe import _
 
 def validate_item_name(doc, method=None):
 	parts = [
-		(doc.custom_category or "").strip(),
 		(doc.custom_description_c or "").strip(),
 		(doc.custom_size or "").strip(),
 		(doc.custom_brand_c or "").strip(),
 	]
 
-	if not any(parts):
+	if not parts[0]:
 		return
 
 	# Override item_name here (instead of just validating it) because ERPNext's
