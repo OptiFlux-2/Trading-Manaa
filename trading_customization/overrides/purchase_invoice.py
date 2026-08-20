@@ -2,6 +2,22 @@ import frappe
 from frappe import _
 
 
+def _get_price_list_rate(item_code, uom, price_list):
+	if not price_list:
+		return None
+
+	return frappe.db.get_value(
+		"Item Price",
+		{
+			"item_code": item_code,
+			"uom": uom,
+			"price_list": price_list,
+			"selling": 1,
+		},
+		"price_list_rate",
+	)
+
+
 def create_linked_sales_invoice(doc, method=None):
 	customer = frappe.db.get_single_value("Trading Setting", "defualt_invoice_customer")
 	if not customer:
@@ -23,7 +39,18 @@ def create_linked_sales_invoice(doc, method=None):
 		si.set_posting_time = 1
 		si.update_stock = 0
 
+		selling_price_list = frappe.get_cached_value(
+			"Customer", customer, "default_price_list"
+		) or frappe.db.get_single_value("Selling Settings", "selling_price_list")
+		if selling_price_list:
+			si.selling_price_list = selling_price_list
+
 		for row in doc.items:
+			# Item Price is kept per-UOM (a box vs. a piece of the same item can be
+			# priced differently), so the rate must be looked up for the specific
+			# UOM used on the Purchase Invoice row rather than reused as-is.
+			rate = _get_price_list_rate(row.item_code, row.uom, selling_price_list)
+
 			si.append(
 				"items",
 				{
@@ -33,7 +60,7 @@ def create_linked_sales_invoice(doc, method=None):
 					"qty": row.qty,
 					"uom": row.uom,
 					"conversion_factor": row.conversion_factor,
-					"rate": row.rate,
+					"rate": rate if rate is not None else row.rate,
 				},
 			)
 

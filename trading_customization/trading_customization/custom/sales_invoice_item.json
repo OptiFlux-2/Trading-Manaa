@@ -1,0 +1,17 @@
+{
+ "custom_fields": [],
+ "custom_perms": [],
+ "doctype": "Sales Invoice Item",
+ "links": [],
+ "property_setters": [
+  {
+   "doc_type": "Sales Invoice Item",
+   "doctype_or_field": "DocField",
+   "field_name": "item_tax_template",
+   "property": "reqd",
+   "property_type": "Check",
+   "value": "0"
+  }
+ ],
+ "sync_on_migrate": 1
+}
