@@ -1,6 +1,6 @@
 {
  "charts": [],
- "content": "[{\"id\":\"GxI2MIC1dp\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Trading</span>\",\"col\":12}},{\"id\":\"PeKVcVRvXq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Urgent Request\",\"col\":3}},{\"id\":\"iGo5bLyJmE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Order\",\"col\":3}},{\"id\":\"JXnODumb4j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Invoice\",\"col\":3}},{\"id\":\"LWCKTy7pey\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Order\",\"col\":3}},{\"id\":\"CgDOV8yVQ2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"-lRHwUOkPO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trading Setting\",\"col\":3}},{\"id\":\"oizhzfAEI6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"VuklVf8fpI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item Price\",\"col\":3}},{\"id\":\"sjH_3JZ3A9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Warehouse\",\"col\":3}}]",
+ "content": "[{\"id\":\"GxI2MIC1dp\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Trading</span>\",\"col\":12}},{\"id\":\"PeKVcVRvXq\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Urgent Request\",\"col\":3}},{\"id\":\"iGo5bLyJmE\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Order\",\"col\":3}},{\"id\":\"JXnODumb4j\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Purchase Invoice\",\"col\":3}},{\"id\":\"LWCKTy7pey\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Order\",\"col\":3}},{\"id\":\"CgDOV8yVQ2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Sales Invoice\",\"col\":3}},{\"id\":\"-lRHwUOkPO\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Trading Setting\",\"col\":3}},{\"id\":\"oizhzfAEI6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":3}},{\"id\":\"VuklVf8fpI\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item Price\",\"col\":3}},{\"id\":\"sjH_3JZ3A9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Warehouse\",\"col\":3}},{\"id\":\"isurhb5RN4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Manpower Receipt\",\"col\":3}},{\"id\":\"oC3Wr4hl2S\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Financial Claim\",\"col\":3}},{\"id\":\"WOEzxkJ0GV\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Petty Cash Expense\",\"col\":3}},{\"id\":\"K8Zr7HYae2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Supply Statement\",\"col\":3}}]",
  "creation": "2026-08-16 22:30:49.633105",
  "custom_blocks": [],
  "docstatus": 0,
@@ -13,7 +13,7 @@
  "is_hidden": 0,
  "label": "Trading",
  "links": [],
- "modified": "2026-08-16 23:53:21.666656",
+ "modified": "2026-09-14 03:42:13.264134",
  "modified_by": "Administrator",
  "module": "Trading Customization",
  "name": "Trading",
@@ -23,8 +23,32 @@
  "public": 1,
  "quick_lists": [],
  "roles": [],
- "sequence_id": 23.0,
+ "sequence_id": 1.0,
  "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Financial Claim",
+   "link_to": "Financial Claim",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Petty Cash Expense",
+   "link_to": "Petty Cash Expense",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Supply Statement",
+   "link_to": "Supply Statement",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
   {
    "color": "Grey",
    "doc_view": "List",
@@ -38,6 +62,14 @@
    "doc_view": "List",
    "label": "Item",
    "link_to": "Item",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Manpower Receipt",
+   "link_to": "Manpower Receipt",
    "stats_filter": "[]",
    "type": "DocType"
   },

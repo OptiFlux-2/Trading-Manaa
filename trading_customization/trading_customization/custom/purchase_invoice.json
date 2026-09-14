@@ -1,0 +1,26 @@
+{
+ "custom_fields": [
+  {
+   "doctype": "Custom Field",
+   "dt": "Purchase Invoice",
+   "fieldname": "custom_non_recoverable_tax",
+   "fieldtype": "Check",
+   "label": "Non-Recoverable Tax",
+   "description": "ضريبة غير مستردة - can be fetched into Petty Cash Expense",
+   "insert_after": "column_break1",
+   "default": "0",
+   "in_standard_filter": 1,
+   "allow_on_submit": 0,
+   "module": "Trading Customization",
+   "name": "Purchase Invoice-custom_non_recoverable_tax",
+   "owner": "Administrator",
+   "modified": "2026-09-14 16:00:00.000000",
+   "creation": "2026-09-14 16:00:00.000000"
+  }
+ ],
+ "custom_perms": [],
+ "doctype": "Purchase Invoice",
+ "links": [],
+ "property_setters": [],
+ "sync_on_migrate": 1
+}

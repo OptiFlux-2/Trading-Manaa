@@ -60,7 +60,10 @@ doctype_js = {
 		"public/js/item_code_supplier_search.js"
 	]
 }
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+doctype_list_js = {
+	"Purchase Invoice": "public/js/purchase_invoice_list.js",
+	"Sales Invoice": "public/js/sales_invoice_list.js",
+}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -265,3 +268,8 @@ doc_events = {
 # List of apps whose translatable strings should be excluded from this app's translations.
 # ignore_translatable_strings_from = []
 
+
+
+fixtures = [
+	{"dt": "Accounting Dimension", "filters": [["name", "=", "Branch"]]},
+]

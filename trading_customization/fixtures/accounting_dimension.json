@@ -1,0 +1,13 @@
+[
+ {
+  "dimension_defaults": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Accounting Dimension",
+  "document_type": "Branch",
+  "fieldname": "branch",
+  "label": "Branch",
+  "modified": "2026-09-10 14:07:35.190015",
+  "name": "Branch"
+ }
+]
